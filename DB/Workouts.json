@@ -1,0 +1,44 @@
+{
+    "workOuts": [
+        {
+            "id": 1,
+            "muscleGroup": "Chest",
+            "exercises": [
+                { "name": "Flat Bench Press", "reps": 10, "sets": 4, "weight": 80 },
+                { "name": "Incline Bench Press", "reps": 12, "sets": 3, "weight": 60 },
+                { "name": "Chest Flys", "reps": 15, "sets": 3, "weight": 20 },
+                { "name": "Push-Ups", "reps": 20, "sets": 3, "weight": 0 }
+            ]
+        },
+        {
+            "id": 2,
+            "muscleGroup": "Legs",
+            "exercises": [
+                { "name": "Squats", "reps": 10, "sets": 4, "weight": 100 },
+                { "name": "Leg Press", "reps": 12, "sets": 3, "weight": 150 },
+                { "name": "Lunges", "reps": 15, "sets": 3, "weight": 20 },
+                { "name": "Calf Raises", "reps": 20, "sets": 4, "weight": 30 }
+            ]
+        },
+        {
+            "id": 3,
+            "muscleGroup": "Arms",
+            "exercises": [
+                { "name": "Bicep Curls", "reps": 12, "sets": 3, "weight": 15 },
+                { "name": "Tricep Dips", "reps": 15, "sets": 3, "weight": 0 },
+                { "name": "Hammer Curls", "reps": 12, "sets": 3, "weight": 15 },
+                { "name": "Overhead Tricep Extension", "reps": 12, "sets": 3, "weight": 20 }
+            ]
+        },
+        {
+            "id": 4,
+            "muscleGroup": "Back",
+            "exercises": [
+                { "name": "Deadlifts", "reps": 10, "sets": 4, "weight": 120 },
+                { "name": "Pull-Ups", "reps": 12, "sets": 3, "weight": 0 },
+                { "name": "Barbell Rows", "reps": 10, "sets": 4, "weight": 70 },
+                { "name": "Lat Pulldowns", "reps": 12, "sets": 3, "weight": 60 }
+            ]
+        }
+    ]
+}
