@@ -30,7 +30,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Today",
+          title: "HEJ",
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
@@ -52,6 +52,20 @@ export default function TabLayout() {
         name="two"
         options={{
           title: "Calendar",
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="workoutCreator"
+        options={{
+          title: "Create workout",
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="addWorkout"
+        options={{
+          title: "Add workout",
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />

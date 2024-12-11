@@ -1,0 +1,503 @@
+[
+  {
+    "ID": 1,
+    "name": "Bench Press",
+    "muscleWorked": ["Chest", "Triceps", "Shoulders"]
+  },
+  {
+    "ID": 2,
+    "name": "Squat",
+    "muscleWorked": ["Quadriceps", "Glutes", "Hamstrings", "Lower Back"]
+  },
+  {
+    "ID": 3,
+    "name": "Deadlift",
+    "muscleWorked": ["Hamstrings", "Glutes", "Lower Back", "Traps", "Forearms"]
+  },
+  {
+    "ID": 4,
+    "name": "Pull-Up",
+    "muscleWorked": ["Back", "Biceps", "Forearms"]
+  },
+  {
+    "ID": 5,
+    "name": "Overhead Press",
+    "muscleWorked": ["Shoulders", "Triceps", "Upper Chest"]
+  },
+  {
+    "ID": 6,
+    "name": "Barbell Row",
+    "muscleWorked": ["Back", "Biceps", "Rear Deltoids"]
+  },
+  {
+    "ID": 7,
+    "name": "Push-Up",
+    "muscleWorked": ["Chest", "Triceps", "Shoulders"]
+  },
+  {
+    "ID": 8,
+    "name": "Lunge",
+    "muscleWorked": ["Quadriceps", "Glutes", "Hamstrings"]
+  },
+  {
+    "ID": 9,
+    "name": "Plank",
+    "muscleWorked": ["Core", "Shoulders"]
+  },
+  {
+    "ID": 10,
+    "name": "Bicep Curl",
+    "muscleWorked": ["Biceps"]
+  },
+  {
+    "ID": 11,
+    "name": "Tricep Dips",
+    "muscleWorked": ["Triceps", "Chest", "Shoulders"]
+  },
+  {
+    "ID": 12,
+    "name": "Dumbbell Fly",
+    "muscleWorked": ["Chest", "Shoulders"]
+  },
+  {
+    "ID": 13,
+    "name": "Leg Press",
+    "muscleWorked": ["Quadriceps", "Glutes", "Hamstrings"]
+  },
+  {
+    "ID": 14,
+    "name": "Calf Raise",
+    "muscleWorked": ["Calves"]
+  },
+  {
+    "ID": 15,
+    "name": "Incline Bench Press",
+    "muscleWorked": ["Upper Chest", "Triceps", "Shoulders"]
+  },
+  {
+    "ID": 16,
+    "name": "Lat Pulldown",
+    "muscleWorked": ["Back", "Biceps"]
+  },
+  {
+    "ID": 17,
+    "name": "Seated Row",
+    "muscleWorked": ["Back", "Biceps", "Rear Deltoids"]
+  },
+  {
+    "ID": 18,
+    "name": "Hammer Curl",
+    "muscleWorked": ["Biceps", "Forearms"]
+  },
+  {
+    "ID": 19,
+    "name": "Face Pull",
+    "muscleWorked": ["Rear Deltoids", "Upper Back"]
+  },
+  {
+    "ID": 20,
+    "name": "Romanian Deadlift",
+    "muscleWorked": ["Hamstrings", "Glutes", "Lower Back"]
+  },
+  {
+    "ID": 21,
+    "name": "Side Plank",
+    "muscleWorked": ["Obliques", "Core"]
+  },
+  {
+    "ID": 22,
+    "name": "Front Squat",
+    "muscleWorked": ["Quadriceps", "Core", "Glutes"]
+  },
+  {
+    "ID": 23,
+    "name": "Hip Thrust",
+    "muscleWorked": ["Glutes", "Hamstrings"]
+  },
+  {
+    "ID": 24,
+    "name": "Chest Fly Machine",
+    "muscleWorked": ["Chest", "Shoulders"]
+  },
+  {
+    "ID": 25,
+    "name": "Leg Curl",
+    "muscleWorked": ["Hamstrings"]
+  },
+  {
+    "ID": 26,
+    "name": "Leg Extension",
+    "muscleWorked": ["Quadriceps"]
+  },
+  {
+    "ID": 27,
+    "name": "Cable Crossover",
+    "muscleWorked": ["Chest", "Shoulders"]
+  },
+  {
+    "ID": 28,
+    "name": "Shoulder Lateral Raise",
+    "muscleWorked": ["Shoulders"]
+  },
+  {
+    "ID": 29,
+    "name": "Shoulder Front Raise",
+    "muscleWorked": ["Front Deltoids"]
+  },
+  {
+    "ID": 30,
+    "name": "Ab Rollout",
+    "muscleWorked": ["Core"]
+  },
+  {
+    "ID": 31,
+    "name": "Incline Dumbbell Press",
+    "muscleWorked": ["Upper Chest", "Triceps", "Shoulders"]
+  },
+  {
+    "ID": 32,
+    "name": "Cable Row",
+    "muscleWorked": ["Back", "Biceps"]
+  },
+  {
+    "ID": 33,
+    "name": "Farmer's Walk",
+    "muscleWorked": ["Forearms", "Grip Strength", "Core"]
+  },
+  {
+    "ID": 34,
+    "name": "Decline Bench Press",
+    "muscleWorked": ["Lower Chest", "Triceps", "Shoulders"]
+  },
+  {
+    "ID": 35,
+    "name": "Zottman Curl",
+    "muscleWorked": ["Biceps", "Forearms"]
+  },
+  {
+    "ID": 36,
+    "name": "Chest Press Machine",
+    "muscleWorked": ["Chest", "Triceps", "Shoulders"]
+  },
+  {
+    "ID": 37,
+    "name": "Preacher Curl",
+    "muscleWorked": ["Biceps"]
+  },
+  {
+    "ID": 38,
+    "name": "Dumbbell Pullover",
+    "muscleWorked": ["Chest", "Back"]
+  },
+  {
+    "ID": 39,
+    "name": "Ab Crunch",
+    "muscleWorked": ["Core"]
+  },
+  {
+    "ID": 40,
+    "name": "Reverse Fly",
+    "muscleWorked": ["Rear Deltoids", "Upper Back"]
+  },
+
+  {
+    "ID": 41,
+    "name": "Dumbbell Shrugs",
+    "muscleWorked": ["Traps", "Forearms"]
+  },
+  {
+    "ID": 42,
+    "name": "Arnold Press",
+    "muscleWorked": ["Shoulders", "Triceps", "Upper Chest"]
+  },
+  {
+    "ID": 43,
+    "name": "Bent-Over Rear Delt Fly",
+    "muscleWorked": ["Rear Deltoids", "Upper Back"]
+  },
+  {
+    "ID": 44,
+    "name": "T-Bar Row",
+    "muscleWorked": ["Back", "Biceps", "Rear Deltoids"]
+  },
+  {
+    "ID": 45,
+    "name": "Spider Curl",
+    "muscleWorked": ["Biceps"]
+  },
+  {
+    "ID": 46,
+    "name": "Incline Dumbbell Curl",
+    "muscleWorked": ["Biceps"]
+  },
+  {
+    "ID": 47,
+    "name": "Bulgarian Split Squat",
+    "muscleWorked": ["Quadriceps", "Glutes", "Hamstrings"]
+  },
+  {
+    "ID": 48,
+    "name": "Landmine Press",
+    "muscleWorked": ["Shoulders", "Chest", "Triceps"]
+  },
+  {
+    "ID": 49,
+    "name": "Single-Arm Dumbbell Row",
+    "muscleWorked": ["Back", "Biceps", "Rear Deltoids"]
+  },
+  {
+    "ID": 50,
+    "name": "Hanging Leg Raise",
+    "muscleWorked": ["Core", "Hip Flexors"]
+  },
+  {
+    "ID": 51,
+    "name": "Kettlebell Swing",
+    "muscleWorked": ["Glutes", "Hamstrings", "Core"]
+  },
+  {
+    "ID": 52,
+    "name": "Pec Deck Machine",
+    "muscleWorked": ["Chest", "Shoulders"]
+  },
+  {
+    "ID": 53,
+    "name": "Reverse Grip Pulldown",
+    "muscleWorked": ["Back", "Biceps"]
+  },
+  {
+    "ID": 54,
+    "name": "Lying Leg Curl",
+    "muscleWorked": ["Hamstrings"]
+  },
+  {
+    "ID": 55,
+    "name": "Good Morning",
+    "muscleWorked": ["Hamstrings", "Glutes", "Lower Back"]
+  },
+  {
+    "ID": 56,
+    "name": "Front Raise with Plate",
+    "muscleWorked": ["Shoulders", "Front Deltoids"]
+  },
+  {
+    "ID": 57,
+    "name": "Box Jump",
+    "muscleWorked": ["Quadriceps", "Glutes", "Calves"]
+  },
+  {
+    "ID": 58,
+    "name": "Clamshell",
+    "muscleWorked": ["Glutes", "Hip Abductors"]
+  },
+  {
+    "ID": 59,
+    "name": "Turkish Get-Up",
+    "muscleWorked": ["Core", "Shoulders", "Glutes"]
+  },
+  {
+    "ID": 60,
+    "name": "Cable Lateral Raise",
+    "muscleWorked": ["Shoulders"]
+  },
+  {
+    "ID": 61,
+    "name": "Zercher Squat",
+    "muscleWorked": ["Quadriceps", "Glutes", "Core"]
+  },
+  {
+    "ID": 62,
+    "name": "Snatch-Grip Deadlift",
+    "muscleWorked": ["Hamstrings", "Glutes", "Lower Back"]
+  },
+  {
+    "ID": 63,
+    "name": "Sumo Deadlift",
+    "muscleWorked": ["Hamstrings", "Glutes", "Adductors"]
+  },
+  {
+    "ID": 64,
+    "name": "Barbell Hip Thrust",
+    "muscleWorked": ["Glutes", "Hamstrings"]
+  },
+  {
+    "ID": 65,
+    "name": "Single-Leg Deadlift",
+    "muscleWorked": ["Hamstrings", "Glutes", "Core"]
+  },
+  {
+    "ID": 66,
+    "name": "Step-Up",
+    "muscleWorked": ["Quadriceps", "Glutes", "Hamstrings"]
+  },
+  {
+    "ID": 67,
+    "name": "Hanging Knee Raise",
+    "muscleWorked": ["Core", "Hip Flexors"]
+  },
+  {
+    "ID": 68,
+    "name": "Woodchopper",
+    "muscleWorked": ["Core", "Obliques"]
+  },
+  {
+    "ID": 69,
+    "name": "Ab Wheel Rollout",
+    "muscleWorked": ["Core"]
+  },
+  {
+    "ID": 70,
+    "name": "Side Lunge",
+    "muscleWorked": ["Quadriceps", "Glutes", "Adductors"]
+  },
+  {
+    "ID": 71,
+    "name": "Cable Tricep Pushdown",
+    "muscleWorked": ["Triceps"]
+  },
+  {
+    "ID": 72,
+    "name": "Close-Grip Bench Press",
+    "muscleWorked": ["Triceps", "Chest", "Shoulders"]
+  },
+  {
+    "ID": 73,
+    "name": "Overhead Tricep Extension",
+    "muscleWorked": ["Triceps"]
+  },
+  {
+    "ID": 74,
+    "name": "Incline Dumbbell Fly",
+    "muscleWorked": ["Upper Chest", "Shoulders"]
+  },
+  {
+    "ID": 75,
+    "name": "Concentration Curl",
+    "muscleWorked": ["Biceps"]
+  },
+  {
+    "ID": 76,
+    "name": "Barbell Curl",
+    "muscleWorked": ["Biceps"]
+  },
+  {
+    "ID": 77,
+    "name": "EZ Bar Curl",
+    "muscleWorked": ["Biceps", "Forearms"]
+  },
+  {
+    "ID": 78,
+    "name": "Reverse Grip Curl",
+    "muscleWorked": ["Biceps", "Forearms"]
+  },
+  {
+    "ID": 79,
+    "name": "Cable Face Pull",
+    "muscleWorked": ["Rear Deltoids", "Upper Back"]
+  },
+  {
+    "ID": 80,
+    "name": "Barbell Shrug",
+    "muscleWorked": ["Traps"]
+  },
+  {
+    "ID": 81,
+    "name": "Battle Ropes",
+    "muscleWorked": ["Shoulders", "Core", "Cardiovascular"]
+  },
+  {
+    "ID": 82,
+    "name": "Weighted Pull-Up",
+    "muscleWorked": ["Back", "Biceps"]
+  },
+  {
+    "ID": 83,
+    "name": "Front Lever",
+    "muscleWorked": ["Core", "Back"]
+  },
+  {
+    "ID": 84,
+    "name": "Russian Twist",
+    "muscleWorked": ["Core", "Obliques"]
+  },
+  {
+    "ID": 85,
+    "name": "Wall Sit",
+    "muscleWorked": ["Quadriceps", "Glutes", "Core"]
+  },
+  {
+    "ID": 86,
+    "name": "Donkey Kick",
+    "muscleWorked": ["Glutes", "Hamstrings"]
+  },
+  {
+    "ID": 87,
+    "name": "Bird Dog",
+    "muscleWorked": ["Core", "Lower Back"]
+  },
+  {
+    "ID": 88,
+    "name": "Farmer's Carry",
+    "muscleWorked": ["Grip Strength", "Core", "Forearms"]
+  },
+  {
+    "ID": 89,
+    "name": "Dead Hang",
+    "muscleWorked": ["Grip Strength", "Forearms", "Shoulders"]
+  },
+  {
+    "ID": 90,
+    "name": "V-Up",
+    "muscleWorked": ["Core"]
+  },
+  {
+    "ID": 91,
+    "name": "Weighted Dip",
+    "muscleWorked": ["Triceps", "Chest", "Shoulders"]
+  },
+  {
+    "ID": 92,
+    "name": "Kettlebell Clean and Press",
+    "muscleWorked": ["Shoulders", "Glutes", "Core"]
+  },
+  {
+    "ID": 93,
+    "name": "Pistol Squat",
+    "muscleWorked": ["Quadriceps", "Glutes", "Core"]
+  },
+  {
+    "ID": 94,
+    "name": "Barbell Front Raise",
+    "muscleWorked": ["Shoulders", "Front Deltoids"]
+  },
+  {
+    "ID": 95,
+    "name": "Reverse Hyperextension",
+    "muscleWorked": ["Glutes", "Lower Back"]
+  },
+  {
+    "ID": 96,
+    "name": "Box Squat",
+    "muscleWorked": ["Quadriceps", "Glutes", "Hamstrings"]
+  },
+  {
+    "ID": 97,
+    "name": "Incline Push-Up",
+    "muscleWorked": ["Chest", "Shoulders", "Triceps"]
+  },
+  {
+    "ID": 98,
+    "name": "Decline Push-Up",
+    "muscleWorked": ["Chest", "Triceps", "Shoulders"]
+  },
+  {
+    "ID": 99,
+    "name": "Incline Bench Row",
+    "muscleWorked": ["Back", "Biceps", "Rear Deltoids"]
+  },
+  {
+    "ID": 100,
+    "name": "Barbell Landmine Row",
+    "muscleWorked": ["Back", "Biceps"]
+  }
+]

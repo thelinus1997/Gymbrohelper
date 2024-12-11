@@ -1,0 +1,27 @@
+[
+    {
+      "ID": 1,
+      "date": "2024-12-10",
+      "exercises": ["Bench Press", "Biceps Curls"]
+    },
+    {
+      "ID": 2,
+      "date": "2024-12-11",
+      "exercises": ["Deadlift", "Pull-Ups", "Squats"]
+    },
+    {
+      "ID": 3,
+      "date": "2024-12-12",
+      "exercises": ["Shoulder Press", "Tricep Dips", "Plank"]
+    },
+    {
+      "ID": 4,
+      "date": "2024-12-13",
+      "exercises": ["Lat Pulldown", "Leg Press", "Calf Raises"]
+    },
+    {
+      "ID": 5,
+      "date": "2024-12-14",
+      "exercises": ["Incline Bench Press", "Barbell Rows", "Lunges"]
+    }
+  ]

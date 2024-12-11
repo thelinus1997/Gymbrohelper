@@ -1,11 +1,13 @@
-import { StyleSheet, useColorScheme, Image } from "react-native";
+import { StyleSheet, useColorScheme, Image, Alert } from "react-native";
 import { Calendar } from "react-native-calendars";
-
-import EditScreenInfo from "@/components/EditScreenInfo";
+import { useRouter } from "expo-router";
 import { View } from "@/components/Themed";
-import React from "react";
-
+import React, { useState } from "react";
+import plannedWorkouts from "../../DB/PlannedWorkouts.json";
 export default function HomeScreen() {
+  const [selectedDate, setSelectedDate] = useState<string | null>(null);
+  const [modalVisible, setModalVisible] = useState(false);
+  const router = useRouter();
   const colorScheme = useColorScheme();
 
   const calendarTheme = {
@@ -32,8 +34,36 @@ export default function HomeScreen() {
       monthTextColor: "#DCDCDC",
     },
   };
-  const handleDayPress = (day: { dateString: any }) => {
-    console.log("Selected date:", day.dateString);
+  const markedDates = plannedWorkouts.reduce((acc, workout) => {
+    acc[workout.date] = {
+      marked: true,
+      dotColor: "orange", // Change this to your preferred dot color
+      activeOpacity: 0,
+    };
+    return acc;
+  }, {});
+
+  const handleDayPress = (day: { dateString: string }) => {
+    // Find the workout for the selected day
+    const selectedWorkout = plannedWorkouts.find(
+      (workout) => workout.date === day.dateString
+    );
+
+    if (selectedWorkout) {
+      // If there's a workout, show an alert with the details
+      Alert.alert(
+        `Workout for ${day.dateString}`,
+        `Exercises: ${selectedWorkout.exercises.join(", ")}`,
+        [{ text: "OK" }]
+      );
+    } else {
+      // If no workout, show a different alert or do nothing
+      Alert.alert(
+        "No workout planned",
+        "There are no planned workouts for this day.",
+        [{ text: "Cancel", style: "cancel" }]
+      );
+    }
   };
 
   return (
@@ -49,6 +79,7 @@ export default function HomeScreen() {
           theme={
             colorScheme === "dark" ? calendarTheme.dark : calendarTheme.light
           }
+          markedDates={markedDates} // Pass the marked dates
         />
       </View>
     </View>

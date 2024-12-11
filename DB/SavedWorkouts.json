@@ -1,0 +1,50 @@
+[
+    {
+      "ID": 1,
+      "exercises": ["Push-Ups", "Squats", "Plank"]
+    },
+    {
+      "ID": 2,
+      "exercises": ["Bench Press", "Biceps Curls", "Triceps Pushdown"]
+    },
+    {
+      "ID": 3,
+      "exercises": ["Deadlift", "Pull-Ups", "Barbell Rows"]
+    },
+    {
+      "ID": 4,
+      "exercises": ["Shoulder Press", "Lateral Raises", "Upright Rows"]
+    },
+    {
+      "ID": 5,
+      "exercises": ["Lunges", "Leg Press", "Calf Raises"]
+    },
+    {
+      "ID": 6,
+      "exercises": ["Dumbbell Chest Press", "Chest Fly", "Push-Ups"]
+    },
+    {
+      "ID": 7,
+      "exercises": ["Lat Pulldown", "Seated Rows", "Shrugs"]
+    },
+    {
+      "ID": 8,
+      "exercises": ["Incline Bench Press", "Tricep Dips", "Cable Bicep Curls"]
+    },
+    {
+      "ID": 9,
+      "exercises": ["Barbell Squats", "Leg Curls", "Step-Ups"]
+    },
+    {
+      "ID": 10,
+      "exercises": ["Romanian Deadlift", "Hip Thrusts", "Glute Bridges"]
+    },
+    {
+      "ID": 11,
+      "exercises": ["Push Press", "Dumbbell Lateral Raise", "Front Squat"]
+    },
+    {
+      "ID": 12,
+      "exercises": ["Dumbbell Lunges", "Bulgarian Split Squats", "Leg Extensions"]
+    }
+]
