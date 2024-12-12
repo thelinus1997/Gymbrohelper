@@ -1,13 +1,26 @@
-import { StyleSheet, useColorScheme, Image, Alert } from "react-native";
+import {
+  StyleSheet,
+  useColorScheme,
+  Image,
+  Alert,
+  Pressable,
+  TouchableWithoutFeedback,
+  Text,
+  Modal,
+} from "react-native";
 import { Calendar } from "react-native-calendars";
 import { useRouter } from "expo-router";
 import { View } from "@/components/Themed";
-import React, { useState } from "react";
-import plannedWorkouts from "../../DB/PlannedWorkouts.json";
+import React, { useEffect, useState } from "react";
+import * as FileSystem from "expo-file-system";
+
+const filePath = FileSystem.documentDirectory + "savedWorkouts.json"; // Path to the saved workouts file
+
 export default function HomeScreen() {
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
-  const [modalVisible, setModalVisible] = useState(false);
-  const router = useRouter();
+  const [isVisible, setIsVisible] = useState(false);
+  const [popupContent, setPopupContent] = useState<string | null>(null);
+  const [markedDates, setMarkedDates] = useState<any>({});
   const colorScheme = useColorScheme();
 
   const calendarTheme = {
@@ -34,38 +47,71 @@ export default function HomeScreen() {
       monthTextColor: "#DCDCDC",
     },
   };
-  const markedDates = plannedWorkouts.reduce((acc, workout) => {
-    acc[workout.date] = {
-      marked: true,
-      dotColor: "orange", // Change this to your preferred dot color
-      activeOpacity: 0,
-    };
-    return acc;
-  }, {});
+  const formatDate = (date: string) => {
+    const [day, month, year] = date.split("/");
+    return `${year}-${month}-${day}`;
+  };
 
-  const handleDayPress = (day: { dateString: string }) => {
-    // Find the workout for the selected day
-    const selectedWorkout = plannedWorkouts.find(
-      (workout) => workout.date === day.dateString
-    );
+  const fetchWorkouts = async () => {
+    try {
+      const fileInfo = await FileSystem.getInfoAsync(filePath);
+      if (fileInfo.exists) {
+        const fileContents = await FileSystem.readAsStringAsync(filePath);
+        const savedWorkouts = JSON.parse(fileContents);
 
-    if (selectedWorkout) {
-      // If there's a workout, show an alert with the details
-      Alert.alert(
-        `Workout for ${day.dateString}`,
-        `Exercises: ${selectedWorkout.exercises.join(", ")}`,
-        [{ text: "OK" }]
-      );
-    } else {
-      // If no workout, show a different alert or do nothing
-      Alert.alert(
-        "No workout planned",
-        "There are no planned workouts for this day.",
-        [{ text: "Cancel", style: "cancel" }]
-      );
+        // Create the markedDates object from saved workouts
+        const newMarkedDates = savedWorkouts.reduce(
+          (acc: any, workout: any) => {
+            const formattedDate = formatDate(workout.date); // Convert date to yyyy-mm-dd
+            acc[formattedDate] = {
+              marked: true,
+              dotColor: "orange",
+              activeOpacity: 0,
+            };
+            return acc;
+          },
+          {}
+        );
+
+        setMarkedDates(newMarkedDates); // Update state with marked dates
+      }
+    } catch (error) {
+      console.error("Error fetching workouts:", error);
     }
   };
 
+  useEffect(() => {
+    fetchWorkouts(); // Call fetchWorkouts when the component mounts
+  }, []);
+
+  const handleDayPress = async (day: { dateString: string }) => {
+    setSelectedDate(day.dateString);
+    const fileInfo = await FileSystem.getInfoAsync(filePath);
+    if (fileInfo.exists) {
+      const fileContents = await FileSystem.readAsStringAsync(filePath);
+      const savedWorkouts = JSON.parse(fileContents);
+
+      // Find the workout that matches the selected date
+      const matchingWorkouts = savedWorkouts.filter(
+        (workout: any) => formatDate(workout.date) === day.dateString
+      );
+
+      if (matchingWorkouts.length > 0) {
+        const exercises = matchingWorkouts
+          .map((workout: any) => workout.exercises.join(", "))
+          .join("\n");
+        setPopupContent(
+          `Workout for ${day.dateString}\nExercises: ${exercises}`
+        );
+      }
+    } else {
+      setPopupContent(
+        `No workout planned\nThere are no planned workouts for this day.`
+      );
+    }
+
+    setIsVisible(true);
+  };
   return (
     <View style={styles.container}>
       <Image
@@ -79,9 +125,26 @@ export default function HomeScreen() {
           theme={
             colorScheme === "dark" ? calendarTheme.dark : calendarTheme.light
           }
-          markedDates={markedDates} // Pass the marked dates
+          markedDates={markedDates}
         />
       </View>
+
+      <Modal
+        transparent
+        visible={isVisible}
+        animationType="fade"
+        onRequestClose={() => setIsVisible(false)}
+      >
+        <TouchableWithoutFeedback onPress={() => setIsVisible(false)}>
+          <View style={styles.overlay}>
+            <TouchableWithoutFeedback>
+              <View style={styles.popup}>
+                <Text style={styles.popupText}>{popupContent}</Text>
+              </View>
+            </TouchableWithoutFeedback>
+          </View>
+        </TouchableWithoutFeedback>
+      </Modal>
     </View>
   );
 }
@@ -90,15 +153,57 @@ const styles = StyleSheet.create({
   headerImg: {
     width: "100%",
     height: "30%",
-    marginBottom: "25%",
   },
-  container: { display: "flex" },
-  calendarContainer: {
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-evenly",
+  },
+  addBtnContainer: {},
+  popup: {
+    width: 300,
+    padding: 20,
+    backgroundColor: "#fff",
+    borderRadius: 10,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  overlay: {
     flex: 1,
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  popupText: {
+    marginBottom: 15,
+    textAlign: "center",
+    fontSize: 16,
+  },
+  calendarContainer: {
     justifyContent: "center",
     alignItems: "center",
   },
   calendar: {
     backgroundColor: "transparent",
+  },
+  buttonSave: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: "orange",
+  },
+  text: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: "bold",
+    letterSpacing: 0.25,
+    color: "white",
   },
 });
