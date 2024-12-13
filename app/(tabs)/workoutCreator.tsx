@@ -12,7 +12,6 @@ import {
 } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import exercises from "../../DB/Exercises.json";
-import savedWorkouts from "../../DB/SavedWorkouts.json";
 import plannedWorkouts from "../../DB/PlannedWorkouts.json";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import * as FileSystem from "expo-file-system";
@@ -99,7 +98,7 @@ export default function WorkoutCreator() {
   const showDatepicker = () => {
     showMode("date");
   };
-  const onChange = (event, selectedDate) => {
+  const onChange = (selectedDate) => {
     const currentDate = selectedDate;
     setShow(false);
     setDate(currentDate);
